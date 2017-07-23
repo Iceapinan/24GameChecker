@@ -32,11 +32,10 @@ typedef struct expr_t {
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    Num1.delegate = self;
-    Num2.delegate = self;
-    Num3.delegate = self;
-    Num4.delegate = self;
-   result = [NSMutableString stringWithFormat:@""];
+    FirstNumber.delegate = self;
+    SecondNumber.delegate = self;
+    ThirdNumber.delegate = self;
+    FourthNumber.delegate = self;
     
 }
 - (void)didReceiveMemoryWarning
@@ -54,12 +53,10 @@ typedef struct expr_t {
     }
     if ([result length]) {
         NSLog(@"%@",result);
-        resultlabel.text = result;
+        ResultLabel.text = result;
     }
     return result;
 }
-
-
 
 void show_expr(expr e, op_type prec, int is_right, id self)
 {
@@ -170,6 +167,7 @@ int solve24(int n[],id self)
     return solve(e, n_cards,self);
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
     return YES;
 }
 
@@ -195,31 +193,29 @@ BOOL isNumeric(NSString *code){
 
 
 
--(IBAction)Gobuttonclick:(id)sender
+-(IBAction)GoButtonClicked:(id)sender
 {
-    if ([Num1.text  isEqual:@""] && [Num2.text isEqual:@""] && [Num3.text isEqual:@""] && [Num4.text isEqual:@""]) {
+    if (![FirstNumber.text  isEqual:@""] && ![SecondNumber.text isEqual:@""] && ![ThirdNumber.text isEqual:@""] && ![FourthNumber.text isEqual:@""]) {
+        [self checkerprog];
+    }
+    else
+    {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error !" message:@"Blank is not allowed." preferredStyle:UIAlertControllerStyleAlert];
         [self presentViewController:alert animated:YES completion:^{
             [alert.view.superview addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(alertControllerBackgroundTapped)]];
         }];
-    }
-    else
-    {
-        [self checkerprog];
-        
     }
 }
 
 
 -(void)checkerprog {
     result = [NSMutableString stringWithFormat:@""];
-    int numberone = [Num1.text intValue];
-    int numbertwo = [Num2.text intValue];
-    int numberthree = [Num3.text intValue];
-    int numberfour = [Num4.text intValue];
+    int numberone = [FirstNumber.text intValue];
+    int numbertwo = [SecondNumber.text intValue];
+    int numberthree = [ThirdNumber.text intValue];
+    int numberfour = [FourthNumber.text intValue];
     
     int i, n[] = { numberone, numbertwo, numberthree, numberfour, 9 };
-    
     
     for (i = 0; i < n_cards; i++) {
         printf(" %d", n[i]);
@@ -242,11 +238,11 @@ BOOL isNumeric(NSString *code){
 }
 
 - (IBAction)ClearClicked:(id)sender {
-    Num1.text = nil;
-    Num2.text = nil;
-    Num3.text = nil;
-    Num4.text = nil;
-    resultlabel.text = nil;
+    FirstNumber.text = nil;
+    SecondNumber.text = nil;
+    ThirdNumber.text = nil;
+    FourthNumber.text = nil;
+    ResultLabel.text = nil;
 }
 
 

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F649CAE117DA2FBE00B9CDB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F649CAE017DA2FBE00B9CDB4 /* Foundation.framework */; };
-		F649CAE317DA2FBE00B9CDB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F649CAE217DA2FBE00B9CDB4 /* CoreGraphics.framework */; };
 		F649CAE517DA2FBE00B9CDB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F649CAE417DA2FBE00B9CDB4 /* UIKit.framework */; };
 		F649CAEB17DA2FBE00B9CDB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F649CAE917DA2FBE00B9CDB4 /* InfoPlist.strings */; };
 		F649CAED17DA2FBE00B9CDB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F649CAEC17DA2FBE00B9CDB4 /* main.m */; };
@@ -16,13 +15,11 @@
 		F649CAF417DA2FBE00B9CDB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F649CAF217DA2FBE00B9CDB4 /* Main.storyboard */; };
 		F649CAFA17DA2FBE00B9CDB4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F649CAF917DA2FBE00B9CDB4 /* ViewController.m */; };
 		F649CAFC17DA2FBE00B9CDB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F649CAFB17DA2FBE00B9CDB4 /* Images.xcassets */; };
-		F6D2B29A17DC250E006B2128 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D2B29917DC250E006B2128 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F649CADD17DA2FBE00B9CDB4 /* 24GameChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 24GameChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F649CAE017DA2FBE00B9CDB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F649CAE217DA2FBE00B9CDB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F649CAE417DA2FBE00B9CDB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F649CAE817DA2FBE00B9CDB4 /* 24GameChecker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "24GameChecker-Info.plist"; sourceTree = "<group>"; };
 		F649CAEA17DA2FBE00B9CDB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -34,7 +31,6 @@
 		F649CAF817DA2FBE00B9CDB4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F649CAF917DA2FBE00B9CDB4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F649CAFB17DA2FBE00B9CDB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F6D2B29917DC250E006B2128 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,8 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6D2B29A17DC250E006B2128 /* AVFoundation.framework in Frameworks */,
-				F649CAE317DA2FBE00B9CDB4 /* CoreGraphics.framework in Frameworks */,
 				F649CAE517DA2FBE00B9CDB4 /* UIKit.framework in Frameworks */,
 				F649CAE117DA2FBE00B9CDB4 /* Foundation.framework in Frameworks */,
 			);
@@ -72,9 +66,7 @@
 		F649CADF17DA2FBE00B9CDB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F6D2B29917DC250E006B2128 /* AVFoundation.framework */,
 				F649CAE017DA2FBE00B9CDB4 /* Foundation.framework */,
-				F649CAE217DA2FBE00B9CDB4 /* CoreGraphics.framework */,
 				F649CAE417DA2FBE00B9CDB4 /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -135,6 +127,7 @@
 				ORGANIZATIONNAME = IceApinan;
 				TargetAttributes = {
 					F649CADC17DA2FBE00B9CDB4 = {
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -261,6 +254,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "24GameChecker/24GameChecker-Prefix.pch";
@@ -270,6 +264,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = IceApinan.24GameChecker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -326,6 +321,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "24GameChecker/24GameChecker-Prefix.pch";
@@ -335,6 +331,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = IceApinan.24GameChecker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

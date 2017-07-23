@@ -10,14 +10,13 @@
 
 
 @interface ViewController : UIViewController <UITextFieldDelegate> {
-    IBOutlet UITextField *Num1;
-    IBOutlet UITextField *Num2;
-    IBOutlet UITextField *Num3;
-    IBOutlet UITextField *Num4;
-    IBOutlet UILabel *resultlabel;
+    IBOutlet UITextField *FirstNumber;
+    IBOutlet UITextField *SecondNumber;
+    IBOutlet UITextField *ThirdNumber;
+    IBOutlet UITextField *FourthNumber;
+    IBOutlet UILabel *ResultLabel;
 }
-
--(IBAction)Gobuttonclick:(id)sender;
+-(IBAction)GoButtonClicked:(id)sender;
 - (IBAction)ClearClicked:(id)sender;
 
 @end

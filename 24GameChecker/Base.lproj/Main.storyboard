@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16G18a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -59,7 +59,7 @@
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="Gobuttonclick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0Pe-0h-s5s"/>
+                                                    <action selector="GoButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0aQ-zW-r54"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmY-ll-9cg">
@@ -92,7 +92,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1Bb-Te-VmQ" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="8gf-Rf-wMc"/>
                             <constraint firstItem="A4c-91-VRU" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Eg0-S5-X6k"/>
@@ -107,11 +107,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Num1" destination="yIR-uK-1OZ" id="5Wx-sd-eCm"/>
-                        <outlet property="Num2" destination="A59-5r-j68" id="cPy-BE-Tej"/>
-                        <outlet property="Num3" destination="5mx-47-iVe" id="LbJ-qC-1Wo"/>
-                        <outlet property="Num4" destination="mDH-NW-wfk" id="WcV-Zc-4g5"/>
-                        <outlet property="resultlabel" destination="XGv-J8-Nay" id="26L-0D-hnJ"/>
+                        <outlet property="FirstNumber" destination="yIR-uK-1OZ" id="9uy-mR-cUJ"/>
+                        <outlet property="FourthNumber" destination="mDH-NW-wfk" id="oZC-uD-YKy"/>
+                        <outlet property="ResultLabel" destination="XGv-J8-Nay" id="hCt-Za-Jnl"/>
+                        <outlet property="SecondNumber" destination="A59-5r-j68" id="dXQ-zp-DGK"/>
+                        <outlet property="ThirdNumber" destination="5mx-47-iVe" id="OMV-Kp-44z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
