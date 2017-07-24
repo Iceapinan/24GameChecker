@@ -193,7 +193,7 @@ BOOL isNumeric(NSString *code){
 
 
 
--(IBAction)GoButtonClicked:(id)sender
+- (IBAction)GoButtonClicked:(id)sender
 {
     if (![FirstNumber.text  isEqual:@""] && ![SecondNumber.text isEqual:@""] && ![ThirdNumber.text isEqual:@""] && ![FourthNumber.text isEqual:@""]) {
         [self checkerprog];
@@ -208,7 +208,7 @@ BOOL isNumeric(NSString *code){
 }
 
 
--(void)checkerprog {
+- (void)checkerprog {
     result = [NSMutableString stringWithFormat:@""];
     int numberone = [FirstNumber.text intValue];
     int numbertwo = [SecondNumber.text intValue];
