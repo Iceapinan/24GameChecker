@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  MainViewController.m
 //  24GameChecker
 //
 //  Created by IceApinan on 9/6/13.
@@ -7,14 +7,14 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
-#import "ViewController.h"
-@interface ViewController () {
+#import "MainViewController.h"
+@interface MainViewController () {
    NSMutableString *result;
 }
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 #define n_cards 4
 #define solve_goal 24
 #define max_digit 9
@@ -31,29 +31,20 @@ typedef struct expr_t {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    FirstNumber.delegate = self;
-    SecondNumber.delegate = self;
-    ThirdNumber.delegate = self;
-    FourthNumber.delegate = self;
-    
+    firstNumber.delegate = self;
+    secondNumber.delegate = self;
+    thirdNumber.delegate = self;
+    fourthNumber.delegate = self;
 }
-- (void)didReceiveMemoryWarning
-{
-    
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    
-}
-- (NSMutableString *) theResult: (const char*)abcd :(int)efgh {
-    if (efgh == 0) {
-        [result appendString:[NSString stringWithFormat:@"%s",abcd]];
+- (NSMutableString *) theResult: (const char*)str :(int)num {
+    if (num == 0) {
+        [result appendString:[NSString stringWithFormat:@"%s",str]];
     } else {
-        [result appendString:[NSString stringWithFormat:@"%d",efgh]];
+        [result appendString:[NSString stringWithFormat:@"%d",num]];
     }
     if ([result length]) {
         NSLog(@"%@",result);
-        ResultLabel.text = result;
+        resultLabel.text = result;
     }
     return result;
 }
@@ -171,31 +162,15 @@ int solve24(int n[],id self)
     return YES;
 }
 
-BOOL isNumeric(NSString *code){
-    
-    NSScanner *ns = [NSScanner scannerWithString:code];
-    float the_value;
-    if ( [ns scanFloat:&the_value] )
-    {
-        NSLog(@"INSIDE IF");
-        // do something with `the_value` if you like
-    }
-    else {
-        NSLog(@"OUTSIDE IF");
-    }
-    return NO;
-}
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     return [string isEqualToString:@""] ||
     ([string stringByTrimmingCharactersInSet:
       [[NSCharacterSet decimalDigitCharacterSet] invertedSet]].length > 0);
 }
 
-
-
-- (IBAction)GoButtonClicked:(id)sender
+- (IBAction)goButtonTapped:(id)sender
 {
-    if (![FirstNumber.text  isEqual:@""] && ![SecondNumber.text isEqual:@""] && ![ThirdNumber.text isEqual:@""] && ![FourthNumber.text isEqual:@""]) {
+    if (![firstNumber.text  isEqual:@""] && ![secondNumber.text isEqual:@""] && ![thirdNumber.text isEqual:@""] && ![fourthNumber.text isEqual:@""]) {
         [self checkerprog];
     }
     else
@@ -207,13 +182,12 @@ BOOL isNumeric(NSString *code){
     }
 }
 
-
 - (void)checkerprog {
     result = [NSMutableString stringWithFormat:@""];
-    int numberone = [FirstNumber.text intValue];
-    int numbertwo = [SecondNumber.text intValue];
-    int numberthree = [ThirdNumber.text intValue];
-    int numberfour = [FourthNumber.text intValue];
+    int numberone = [firstNumber.text intValue];
+    int numbertwo = [secondNumber.text intValue];
+    int numberthree = [thirdNumber.text intValue];
+    int numberfour = [fourthNumber.text intValue];
     
     int i, n[] = { numberone, numbertwo, numberthree, numberfour, 9 };
     
@@ -223,6 +197,7 @@ BOOL isNumeric(NSString *code){
     printf(":  ");
     if (solve24(n,self)) {
         printf("\n");
+        [self.view endEditing:YES];
     } else {
         printf("No solution\n");
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Sorry !" message:@"No solution for these values." preferredStyle:UIAlertControllerStyleAlert];
@@ -237,15 +212,11 @@ BOOL isNumeric(NSString *code){
     [self dismissViewControllerAnimated: YES completion: nil];
 }
 
-- (IBAction)ClearClicked:(id)sender {
-    FirstNumber.text = nil;
-    SecondNumber.text = nil;
-    ThirdNumber.text = nil;
-    FourthNumber.text = nil;
-    ResultLabel.text = nil;
+- (IBAction)clearButtonTapped:(id)sender {
+    firstNumber.text = nil;
+    secondNumber.text = nil;
+    thirdNumber.text = nil;
+    fourthNumber.text = nil;
+    resultLabel.text = nil;
 }
-
-
-
-
-    @end
+@end

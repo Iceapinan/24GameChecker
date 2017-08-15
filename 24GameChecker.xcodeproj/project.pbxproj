@@ -13,8 +13,9 @@
 		F649CAED17DA2FBE00B9CDB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F649CAEC17DA2FBE00B9CDB4 /* main.m */; };
 		F649CAF117DA2FBE00B9CDB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F649CAF017DA2FBE00B9CDB4 /* AppDelegate.m */; };
 		F649CAF417DA2FBE00B9CDB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F649CAF217DA2FBE00B9CDB4 /* Main.storyboard */; };
-		F649CAFA17DA2FBE00B9CDB4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F649CAF917DA2FBE00B9CDB4 /* ViewController.m */; };
+		F649CAFA17DA2FBE00B9CDB4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F649CAF917DA2FBE00B9CDB4 /* MainViewController.m */; };
 		F649CAFC17DA2FBE00B9CDB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F649CAFB17DA2FBE00B9CDB4 /* Images.xcassets */; };
+		F6A6D6381F43779200B62E18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A6D6361F43779200B62E18 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +29,10 @@
 		F649CAEF17DA2FBE00B9CDB4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F649CAF017DA2FBE00B9CDB4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F649CAF317DA2FBE00B9CDB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F649CAF817DA2FBE00B9CDB4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F649CAF917DA2FBE00B9CDB4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F649CAF817DA2FBE00B9CDB4 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F649CAF917DA2FBE00B9CDB4 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F649CAFB17DA2FBE00B9CDB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F6A6D6371F43779200B62E18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,9 @@
 				F649CAEF17DA2FBE00B9CDB4 /* AppDelegate.h */,
 				F649CAF017DA2FBE00B9CDB4 /* AppDelegate.m */,
 				F649CAF217DA2FBE00B9CDB4 /* Main.storyboard */,
-				F649CAF817DA2FBE00B9CDB4 /* ViewController.h */,
-				F649CAF917DA2FBE00B9CDB4 /* ViewController.m */,
+				F6A6D6361F43779200B62E18 /* LaunchScreen.storyboard */,
+				F649CAF817DA2FBE00B9CDB4 /* MainViewController.h */,
+				F649CAF917DA2FBE00B9CDB4 /* MainViewController.m */,
 				F649CAFB17DA2FBE00B9CDB4 /* Images.xcassets */,
 				F649CAE717DA2FBE00B9CDB4 /* Supporting Files */,
 			);
@@ -127,6 +130,7 @@
 				ORGANIZATIONNAME = IceApinan;
 				TargetAttributes = {
 					F649CADC17DA2FBE00B9CDB4 = {
+						DevelopmentTeam = QD7C83FMRS;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -163,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F649CAFC17DA2FBE00B9CDB4 /* Images.xcassets in Resources */,
+				F6A6D6381F43779200B62E18 /* LaunchScreen.storyboard in Resources */,
 				F649CAF417DA2FBE00B9CDB4 /* Main.storyboard in Resources */,
 				F649CAEB17DA2FBE00B9CDB4 /* InfoPlist.strings in Resources */,
 			);
@@ -175,7 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F649CAFA17DA2FBE00B9CDB4 /* ViewController.m in Sources */,
+				F649CAFA17DA2FBE00B9CDB4 /* MainViewController.m in Sources */,
 				F649CAF117DA2FBE00B9CDB4 /* AppDelegate.m in Sources */,
 				F649CAED17DA2FBE00B9CDB4 /* main.m in Sources */,
 			);
@@ -198,6 +203,14 @@
 				F649CAF317DA2FBE00B9CDB4 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F6A6D6361F43779200B62E18 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6A6D6371F43779200B62E18 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -255,7 +268,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QD7C83FMRS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "24GameChecker/24GameChecker-Prefix.pch";
 				INFOPLIST_FILE = "24GameChecker/24GameChecker-Info.plist";
@@ -322,7 +335,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QD7C83FMRS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "24GameChecker/24GameChecker-Prefix.pch";
 				INFOPLIST_FILE = "24GameChecker/24GameChecker-Info.plist";
