@@ -59,7 +59,7 @@
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="GoButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0aQ-zW-r54"/>
+                                                    <action selector="goButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hg8-e4-jng"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmY-ll-9cg">
@@ -68,7 +68,7 @@
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="ClearClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nwV-IK-HLT"/>
+                                                    <action selector="clearButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mam-sV-eKj"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -107,11 +107,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="FirstNumber" destination="yIR-uK-1OZ" id="9uy-mR-cUJ"/>
-                        <outlet property="FourthNumber" destination="mDH-NW-wfk" id="oZC-uD-YKy"/>
-                        <outlet property="ResultLabel" destination="XGv-J8-Nay" id="hCt-Za-Jnl"/>
-                        <outlet property="SecondNumber" destination="A59-5r-j68" id="dXQ-zp-DGK"/>
-                        <outlet property="ThirdNumber" destination="5mx-47-iVe" id="OMV-Kp-44z"/>
+                        <outlet property="firstNumber" destination="yIR-uK-1OZ" id="dKU-F5-irI"/>
+                        <outlet property="fourthNumber" destination="mDH-NW-wfk" id="h5b-Wt-w6r"/>
+                        <outlet property="resultLabel" destination="XGv-J8-Nay" id="GtY-Su-GTe"/>
+                        <outlet property="secondNumber" destination="A59-5r-j68" id="pWx-Cp-Z8K"/>
+                        <outlet property="thirdNumber" destination="5mx-47-iVe" id="IoP-Jm-bbv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
