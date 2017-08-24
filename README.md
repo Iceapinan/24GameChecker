@@ -1,6 +1,6 @@
 # 24GameChecker
 
-<img src="http://i.imgur.com/ymACB4P.png" width="40%">
+<img src="http://i.imgur.com/ymACB4P.png" width="40%"/>
 
 ### What is 24 Game ?
 The 24 Game is an arithmetical card game in which the objective is to find a way to manipulate four integers
