@@ -1,7 +1,7 @@
 # 24GameChecker
 
-<div align="center"> <img src="http://i.imgur.com/vGHeStQ.png" width="40%" hspace="10">
-<img src="http://i.imgur.com/898g6Lx.png" width="40%" hspace="10"></div>
+<div align="center"> <img src="http://i.imgur.com/DPDfHbi.png" width="40%" hspace="10">
+<img src="http://i.imgur.com/sLuj8D7.png" width="40%" hspace="10"></div>
 
 ### What is 24 Game ?
 The 24 Game is an arithmetical card game in which the objective is to find a way to manipulate four integers
