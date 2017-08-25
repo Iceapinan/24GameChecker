@@ -10,11 +10,13 @@
 
 
 @interface MainViewController : UIViewController <UITextFieldDelegate> {
-    IBOutlet UITextField *firstNumber;
-    IBOutlet UITextField *secondNumber;
-    IBOutlet UITextField *thirdNumber;
-    IBOutlet UITextField *fourthNumber;
-    IBOutlet UILabel *resultLabel;
+    __weak IBOutlet UITextField *firstNumber;
+    __weak IBOutlet UITextField *secondNumber;
+    __weak IBOutlet UITextField *thirdNumber;
+    __weak IBOutlet UITextField *fourthNumber;
+    __weak IBOutlet UILabel *resultLabel;
+    __weak IBOutlet UIButton *goButton;
+    __weak IBOutlet UIButton *clearButton;
 }
 -(IBAction)goButtonTapped:(id)sender;
 - (IBAction)clearButtonTapped:(id)sender;

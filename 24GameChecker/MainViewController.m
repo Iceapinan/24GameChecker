@@ -35,11 +35,19 @@ typedef struct expr_t {
     secondNumber.delegate = self;
     thirdNumber.delegate = self;
     fourthNumber.delegate = self;
+    goButton.layer.borderWidth = 1.25f;
+    clearButton.layer.borderWidth = 1.25f;
+    
 }
+
 - (NSMutableString *) theResult: (const char*)str :(int)num {
-    if (num == 0) {
+    if (num == 0 && str != nil) {
         [result appendString:[NSString stringWithFormat:@"%s",str]];
-    } else {
+    }
+    else if (num == 0 && str == nil) {
+        [result appendString:@"0"];
+    }
+    else {
         [result appendString:[NSString stringWithFormat:@"%d",num]];
     }
     if ([result length]) {
@@ -54,7 +62,7 @@ void show_expr(expr e, op_type prec, int is_right, id self)
     const char * op;
     switch(e->op) {
         case C_NUM:
-            [self theResult:nil : e->value]; ;
+            [self theResult:nil : e->value];
             return;
         case C_ADD:     op = " + "; break;
         case C_SUB:     op = " - "; break;
@@ -171,7 +179,8 @@ int solve24(int n[],id self)
 - (IBAction)goButtonTapped:(id)sender
 {
     if (![firstNumber.text  isEqual:@""] && ![secondNumber.text isEqual:@""] && ![thirdNumber.text isEqual:@""] && ![fourthNumber.text isEqual:@""]) {
-        [self checkerprog];
+        clearButton.alpha = 1.0;
+        [self checkerProgress];
     }
     else
     {
@@ -182,7 +191,7 @@ int solve24(int n[],id self)
     }
 }
 
-- (void)checkerprog {
+- (void)checkerProgress {
     result = [NSMutableString stringWithFormat:@""];
     int numberone = [firstNumber.text intValue];
     int numbertwo = [secondNumber.text intValue];
@@ -207,12 +216,13 @@ int solve24(int n[],id self)
     }
         
   }
-- (void)alertControllerBackgroundTapped
-{
+
+- (void)alertControllerBackgroundTapped {
     [self dismissViewControllerAnimated: YES completion: nil];
 }
 
 - (IBAction)clearButtonTapped:(id)sender {
+    clearButton.alpha = 0.6;
     firstNumber.text = nil;
     secondNumber.text = nil;
     thirdNumber.text = nil;
