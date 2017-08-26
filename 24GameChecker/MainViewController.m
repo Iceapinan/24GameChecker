@@ -37,7 +37,8 @@ typedef struct expr_t {
     fourthNumber.delegate = self;
     goButton.layer.borderWidth = 1.25f;
     clearButton.layer.borderWidth = 1.25f;
-    
+    goButton.layer.cornerRadius = 6.0;
+    clearButton.layer.cornerRadius = 6.0;
 }
 
 - (NSMutableString *) theResult: (const char*)str :(int)num {
