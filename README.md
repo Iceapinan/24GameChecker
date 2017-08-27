@@ -10,7 +10,6 @@ so that the end result is 24. For example, for the card with the numbers 4, 7, 8
 ### How it works:
 - Input four digits that you want to solve = 24
 - Tap "Go"
-- The solution will appear in front of you.
 
 ##### This is my first iOS App created when I was in Grade 8 on 09/06/2013.
 ##### Update 28/06/2017 : 24GameChecker supports from iOS 9 to iOS 11 devices.
